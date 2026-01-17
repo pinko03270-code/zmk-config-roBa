@@ -66,7 +66,8 @@
         };
     };
 
-    behaviors {
+behaviors {
+        // 1つ目の設定
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -74,18 +75,20 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        }; 
+        // ↑ ここにあった「};」を消しました（まだbehaviorsを閉じない！）
+
+        // 2つ目の設定（これもしっかり中に入れる）
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            // 追加: スクロールのタップ時間を設定 (20ms)
+            tap-ms = <20>;
         };
-    };
 
-    scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-        // 追加: スクロールのタップ時間を設定 (20ms)
-
-        tap-ms = <20>;
-    };
+    }; // ← ✅ 最後にここで behaviors を閉じます
 
     keymap {
         compatible = "zmk,keymap";
