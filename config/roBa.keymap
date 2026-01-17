@@ -96,10 +96,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W           &kp E         &kp R           &kp T                                                                           &kp Y                &kp U  &kp I      &kp O      &kp P
-&kp A      &kp S           &kp D         &kp F           &kp G                   &kp LG(LS(NUMBER_4))      &kp COMMA                     &kp H                &kp J  &kp K      &kp L      &kp BACKSPACE
-&kp Z      &kp X           &kp C         &kp V           &kp B                   &kp MINUS                 &kp PERIOD                    &kp N                &kp M  &mkp LCLK  &mkp RCLK  &mt LEFT_SHIFT SLASH
-&kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &mt LCMD ENTER  &lt_to_layer_0 1 SPACE  &lt_to_layer_0 2 TAB      &lt_to_layer_0 3 EXCLAMATION  &mt LC(RCMD) ESCAPE                               &kp RET
+&kp Q      &kp W           &kp E         &kp R           &kp T                                                                         &kp Y               &kp U  &kp I      &kp O      &kp P
+&kp A      &kp S           &kp D         &kp F           &kp G                   &kp LG(LS(NUMBER_4))      &kp COMMA                   &kp H               &kp J  &kp K      &kp L      &kp EXCLAMATION
+&kp Z      &kp X           &kp C         &kp V           &kp B                   &kp MINUS                 &kp PERIOD                  &kp N               &kp M  &mkp LCLK  &mkp RCLK  &mt LEFT_SHIFT SLASH
+&kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &mt LCMD ENTER  &lt_to_layer_0 1 SPACE  &lt_to_layer_0 2 TAB      &lt_to_layer_0 3 BACKSPACE  &mt LC(RCMD) ENTER                               &kp ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
